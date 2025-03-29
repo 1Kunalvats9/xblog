@@ -1,14 +1,15 @@
 # xblog
 
+In my webpage i've provided with a example mongodb url for authentication and authorisation purpose and have not used environment variables.
+
 here you can first fork this repository in your local code editor, and follow the following steps:
 1) cd backend
-2) npm install
-3) npm start
+2) npm install  ( to install the dependencies)
+3) npm start  (This will start the server on your local computer)
 4) cd ../frontend
-5) npm install
-6) npm run dev
+5) npm install  (to install the dependencies)
+6) npm run dev (this will start rendering the page on your local host)
 Now your project will run on the ports on your local computer server.
-
 
 
 
