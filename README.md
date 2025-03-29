@@ -34,9 +34,11 @@ Installation Steps
    https://github.com/1Kunalvats9/xblog
 
 2) Navigate to backend folder and run the commands afterwards:
-   $ cd backend
-   $ npm install
-   $ npm start
+   ```bash
+   
+   cd backend
+   npm install
+   npm start
 
 3)Navigate to frontend folder and run the following commands:
   $ cd ../frontend
