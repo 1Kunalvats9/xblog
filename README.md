@@ -1,17 +1,47 @@
 # xblog
+XBlog is a web-based platform designed for discovering and reading blogs across various topics. It curates articles from multiple categories and allows users to search for specific content. With an intuitive interface, BlogSphere ensures a seamless reading experience.
 
-In my webpage i've provided with a example mongodb url for authentication and authorisation purpose and have not used environment variables.
+Key Features
 
-here you can first fork this repository in your local code editor, and follow the following steps:
-1) cd backend
-2) npm install  ( to install the dependencies)
-3) npm start  (This will start the server on your local computer and make sure you don't have a previous server running on port 3000)
-4) cd ../frontend
-5) npm install  (to install the dependencies)
-6) npm run dev (this will start rendering the page on your local host)
-Now your project will run on the ports on your local computer server.
+Diverse Blog Categories – Browse content from categories like Business, Technology, Tesla, and more.
 
+Dedicated Category Pages – View blogs focused on specific subjects.
 
+Article Preview – Open a modal to get a quick overview of an article, with a link to read the full post.
 
+User Accounts  – Sign up or log in for personalized content.
 
-In this project i've used React.js, express, mongodb for database, tailwindcss for styling.
+Responsive Layout – Optimized for smooth performance on all devices.
+
+Tech Stack
+
+React – Core framework for the frontend.
+
+React Router – Manages navigation between different sections.
+
+NewsAPI – Retrieves up-to-date articles.
+
+TailwindCSS – Handles styling and layout.
+
+React Hooks (useState, useEffect) – Manages state and component lifecycle.
+
+Setup Guide
+
+Follow these steps to install and run BlogSphere locally.
+
+Installation Steps
+1) Clone the repository:
+   https://github.com/1Kunalvats9/xblog
+
+2) Navigate to backend folder and run the commands afterwards:
+   $ cd backend
+   $ npm install
+   $ npm start
+
+3)Navigate to frontend folder and run the following commands:
+  $ cd ../frontend
+  $ npm install
+  $ npm run dev
+  
+4) Now go to your browser and your project is live
+   
