@@ -40,7 +40,7 @@ Installation Steps
    npm install
    npm start
    ```
-3) Navigate to frontend folder and run the following commands:
+3) Open a new terminal window in your local code editor and Navigate to frontend folder and run the following commands:
    ```bash
      cd ../frontend
      npm install
