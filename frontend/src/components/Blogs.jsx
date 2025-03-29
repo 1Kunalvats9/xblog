@@ -36,7 +36,7 @@ const Blogs = () => {
   useEffect(() => {
     const fetchApi = async () => {
       let res = await fetch(
-        `http://newsapi.org/v2/everything?q=tesla&from=2025-02-28&sortBy=publishedAt&page=${page}&pageSize=${pageSize}&apiKey=3b57ffb196bb4694968511d83395c9a1`,{
+        `https://newsapi.org/v2/everything?q=tesla&from=2025-02-28&sortBy=publishedAt&page=${page}&pageSize=${pageSize}&apiKey=3b57ffb196bb4694968511d83395c9a1`,{
           method: "GET",
           headers: {
             "Accept": "application/json",
