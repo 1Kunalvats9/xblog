@@ -68,7 +68,7 @@ const Blogs = () => {
         <div className="w-[90%] grid grid-cols-1 pv-4 md:grid-cols-3 gap-4">
 
           {/*If there is no blogs data fetched */}
-          {articles.length === 0 ? (
+          {articles && articles.length === 0 ? (
             <h1 className="text-black">No Blogs</h1>
           ) : (
             // When there are blogs fetched so we map over them and return elements
