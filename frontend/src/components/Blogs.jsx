@@ -72,7 +72,7 @@ const Blogs = () => {
             <h1 className="text-black">No Blogs</h1>
           ) : (
             // When there are blogs fetched so we map over them and return elements
-            articles.map((item, idx) => (
+            articles && articles.map((item, idx) => (
               <div
                 key={idx}
                 className={`relative bg-white border-2 border-gray-300 px-4 py-3 rounded-xl cursor-pointer transition-all duration-500 ease-in-out overflow-x-hidden overflow-y-scroll scrollbar-none border-box ${expandedIndex === idx
