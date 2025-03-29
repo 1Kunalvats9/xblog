@@ -2,7 +2,7 @@ const express = require("express");
 const bcrypt = require("bcryptjs");
 const jwt = require("jsonwebtoken");
 const User = require("../models/userModel");
-
+const JWT_SECRET = 'kunalisgood'
 const router = express.Router();
 
 // 🔹 Register a New User
@@ -31,26 +31,12 @@ router.post("/login", async (req, res) => {
     if (!user) return res.status(400).json({ message: "User not found" });
     const isMatch = await bcrypt.compare(password, user.password);
     if (!isMatch) return res.status(400).json({ message: "Invalid credentials" });
-    const token = jwt.sign({ id: user._id }, process.env.JWT_SECRET, { expiresIn: "1h" });
+    const token = jwt.sign({ id: user._id },JWT_SECRET, { expiresIn: "1h" });
     res.json({ token, user });
   } catch (err) {
     res.status(500).json({ message: err.message });
   }
 });
 
-// 🔹 Get User Data
-// router.get("/me", async (req, res) => {
-//   try {
-//     const token = req.header("Authorization");
-//     if (!token) return res.status(401).json({ message: "Access denied" });
-
-//     const decoded = jwt.verify(token, process.env.JWT_SECRET);
-//     const user = await User.findById(decoded.id).select("-password"); // Exclude password
-
-//     res.json(user);
-//   } catch (err) {
-//     res.status(401).json({ message: "Invalid token" });
-//   }
-// });
 
 module.exports = router;
