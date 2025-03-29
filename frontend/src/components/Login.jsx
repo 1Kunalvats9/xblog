@@ -5,6 +5,8 @@ const Login = () => {
   const [email, setEmail] = useState("")
   const [password, setPassword] = useState("")
   const router = useNavigate()
+
+  //Handeling submit the case when submit button is clicked
   const handleSubmit = async(e)=>{
     e.preventDefault()
     try{
@@ -33,6 +35,8 @@ const Login = () => {
   }
   return (
     <div className='w-[100vw] h-[100vh] bg-[#FFEFDD] flex items-center justify-center'>
+
+    {/*Form */}
       <form onSubmit={handleSubmit} className='flex w-[80vw] md:w-[30vw] h-fit bg-white flex-col gap-5 border-2 border-gray-500 px-6 py-10 rounded-xl' >
         <h1 className='text-center text-2xl'>Login Form</h1>
         <label htmlFor="email">Email:</label>

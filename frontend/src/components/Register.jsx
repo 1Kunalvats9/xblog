@@ -7,6 +7,8 @@ const Register = () => {
   const [password, setPassword] = useState("")
   const router = useNavigate();
 
+
+  //Handeling registering functionality to fetch api and register the user to the example database
   const handleSubmit = async (e) => {
     e.preventDefault(); 
 

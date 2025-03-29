@@ -9,6 +9,8 @@ const Home = () => {
     const handleClick = ()=>{
         navigate("/blogs")
     }
+
+    //images array to show it on home page
     const images = [
       "https://cryptoslate.com/wp-content/uploads/2023/08/elonmusk-x-768x403.jpg",
       "https://www.theglobeandmail.com/resizer/v2/JDAYC7F5RZFPVOZYHTOWYNIZ3A.JPG?auth=9fe3c24b9796bc84cf9fa6ebefb8472086382784654c1693f4f169195fefb2f3&width=900&quality=80",
@@ -22,7 +24,11 @@ const Home = () => {
   return (
     <>
       <div className='min-h-screen bg-[#FFEFDD] flex items-center justify-start flex-col '>
+        {/*Navbar of the page */}
+        
         <Navbar />
+
+        {/*The hero section */}
         <div className='w-[100vw] min-h-screen flex flex-col lg:flex-row items-center mt-4 justify-center px-8 md:px-12 lg:px-0'>
           <div className='w-[95vw] z-10 lg:w-[40vw] h-[90%]'>
             <h1 className='text-black text-3xl px-6 md:px-0 md:text-6xl'>Stay Informed with the latest updates <span className='italic font-light'>and Blog Highlight</span></h1>
@@ -51,6 +57,9 @@ const Home = () => {
             <img className='w-full rounded-xl' src={images[imgIdx]} alt="" />
           </div>
         </div>
+
+        {/*Footer */}
+
         <div className='w-full flex items-center justify-center'>
           <Footer />
         </div>

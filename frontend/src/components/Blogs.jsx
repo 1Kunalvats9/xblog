@@ -30,6 +30,8 @@ const Blogs = () => {
   };
 
   const navigate = useNavigate();
+
+  //fetching news api to fetch the blogs
   useEffect(() => {
     const fetchApi = async () => {
       let res = await fetch(
@@ -41,6 +43,8 @@ const Blogs = () => {
     fetchApi();
   }, [page]);
 
+
+  // handling the case when user is not logged in and accessing the page.
   useEffect(() => {
     const token = localStorage.getItem("webtoken");
     if (!token) {
@@ -61,9 +65,12 @@ const Blogs = () => {
       <div className="w-[100%] flex flex-col items-center justify-start gap-4">
         <h1 className="text-5xl text-black mt-10">Blogs</h1>
         <div className="w-[90%] grid grid-cols-1 pv-4 md:grid-cols-3 gap-4">
+
+          {/*If there is no blogs data fetched */}
           {articles.length === 0 ? (
             <h1 className="text-black">No Blogs</h1>
           ) : (
+            // When there are blogs fetched so we map over them and return elements
             articles.map((item, idx) => (
               <div
                 key={idx}
@@ -88,6 +95,9 @@ const Blogs = () => {
                 }>
                   {item.title}
                 </h1>
+
+                {/*handling the userclick on blog to show more content on it.*/}
+
                 {expandedIndex === idx && (
                   <div>
                     <h1 className="text-sm mb-1">By <span className="font-bold">{item.author}</span></h1>
@@ -126,6 +136,7 @@ const Blogs = () => {
                   e.stopPropagation();
                   toggleLike(idx);
                 }}>
+                  {/*Managing likes on the page */}
                   {likes[page * pageSize + idx] ? (
                     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" className="w-5 h-5 fill-red-500">
                       <path d="M47.6 300.4L228.3 469.1c7.5 7 17.4 10.9 27.7 10.9s20.2-3.9 27.7-10.9L464.4 300.4c30.4-28.3 47.6-68 47.6-109.5v-5.8c0-69.9-50.5-129.5-119.4-141C347 36.5 300.6 51.4 268 84L256 96 244 84c-32.6-32.6-79-47.5-124.6-39.9C50.5 55.6 0 115.2 0 185.1v5.8c0 41.5 17.2 81.2 47.6 109.5z"/>
