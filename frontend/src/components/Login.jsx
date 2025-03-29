@@ -10,7 +10,7 @@ const Login = () => {
   const handleSubmit = async(e)=>{
     e.preventDefault()
     try{
-      let res = await fetch("http://localhost:3000/routes/auth/login",{
+      let res = await fetch("https://xblogr.onrender.com/routes/auth/login",{
         method:"POST",
         body: JSON.stringify({
           email,password

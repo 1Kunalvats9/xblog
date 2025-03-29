@@ -5,6 +5,7 @@ import imgDefault from "../assets/image.png";
 import { useNavigate } from "react-router-dom";
 import Footer from "./Footer";
 
+
 const Blogs = () => {
   const [page, setPage] = useState(1);
   const pageSize = 12;

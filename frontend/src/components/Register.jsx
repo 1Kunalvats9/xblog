@@ -13,7 +13,7 @@ const Register = () => {
     e.preventDefault(); 
 
     try {
-      const res = await fetch("http://localhost:3000/routes/auth/register", { 
+      const res = await fetch("https://xblogr.onrender.com/routes/auth/register", { 
         method: "POST",
         headers: {
           "Content-Type": "application/json",
