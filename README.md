@@ -39,11 +39,13 @@ Installation Steps
    cd backend
    npm install
    npm start
-
+   ```
 3)Navigate to frontend folder and run the following commands:
-  $ cd ../frontend
-  $ npm install
-  $ npm run dev
+   ```bash
+     cd ../frontend
+     npm install
+     npm run dev
+   ```
   
 4) Now go to your browser and your project is live
    
