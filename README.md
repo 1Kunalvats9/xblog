@@ -40,12 +40,12 @@ Installation Steps
    npm install
    npm start
    ```
-3)Navigate to frontend folder and run the following commands:
+3) Navigate to frontend folder and run the following commands:
    ```bash
      cd ../frontend
      npm install
      npm run dev
    ```
   
-4) Now go to your browser and your project is live
+5) Now go to your browser and your project is live
    
