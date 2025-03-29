@@ -8,3 +8,9 @@ here you can first fork this repository in your local code editor, and follow th
 5) npm install
 6) npm run dev
 Now your project will run on the ports on your local computer server.
+
+
+
+
+
+In this project i've used React.js, express, mongodb for database, tailwindcss for styling.
