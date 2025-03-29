@@ -40,8 +40,10 @@ const Blogs = () => {
           method: "GET",
           headers: {
             "Accept": "application/json",
-            "User-Agent": "Mozilla/5.0"  // Add this line
-          }
+            "User-Agent": "Mozilla/5.0",  // Add this line
+            "Connection": "keep-alive" // Helps prevent HTTP downgrade issues
+          },
+          keepalive: true
         });
       let data = await res.json();
       setArticles(data.articles);
