@@ -36,12 +36,12 @@ const Blogs = () => {
   useEffect(() => {
     const fetchApi = async () => {
       let res = await fetch(
-        `https://newsapi.org/v2/everything?q=tesla&from=2025-02-28&sortBy=publishedAt&page=${page}&pageSize=${pageSize}&apiKey=3b57ffb196bb4694968511d83395c9a1`,{
+        `https://newsapi.org/v2/everything?q=tesla&from=2025-03-02&sortBy=publishedAt&apiKey=3b57ffb196bb4694968511d83395c9a1`,{
           method: "GET",
           headers: {
             "Accept": "application/json",
-            "User-Agent": "Mozilla/5.0",  // Add this line
-            "Connection": "keep-alive" // Helps prevent HTTP downgrade issues
+            "User-Agent": "Mozilla/5.0", 
+            "Connection": "keep-alive" 
           },
           keepalive: true
         });
@@ -51,8 +51,6 @@ const Blogs = () => {
     fetchApi();
   }, [page]);
 
-
-  // handling the case when user is not logged in and accessing the page.
   useEffect(() => {
     const token = localStorage.getItem("webtoken");
     if (!token) {
